@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnowFlake Studio</title>
+    <link rel="stylesheet" href="CSS/StyleMain.css">
+    <link rel="icon" href="Pictures/Snowflake%20logo.png" type="image/png">
+    <script src="JS/script.js"></script>
+    <style>
+        /* Style for the video background */
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        /* Style adjustments for content */
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: 50px;
+        }
+
+        .header, .buttons a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="transition-fade">
+<video id="bg-video" autoplay muted loop>
+    <source src="Video/Snowfall.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+
+<header class="header">
+    <a href="#" class="logo">
+        <img src="Pictures/Snowflake%20logoV3.png" alt="Logo Image">
+        SnowFlake Studio
+    </a>
+
+    <nav class="navbar">
+        <a href="#"></a>
+        <a href="Main.html">Home</a>
+        <a href="About.html">About Us</a>
+
+        <!-- Dropdown Structure -->
+        <div class="dropdown">
+            <button class="dropbtn">Projects</button>
+            <div class="dropdown-content">
+                <a href="projectsnowflake.html">Project Snowflake</a>
+                <!-- Add more languages as needed -->
+            </div>
+        </div>
+
+        <a href="Account.html">Sign in</a>
+
+    </nav>
+</header>
+
+
+
+<!-- Buttons -->
+<div class="content">
+    <h1>WELCOME TO SNOWFLAKE STUDIOS</h1>
+    <div class="buttons">
+        <a href="About.html" class="btn"><span>About Us</span></a>
+        <a href="projectsnowflake.html" class="btn"><span>Project Snowflake</span></a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
