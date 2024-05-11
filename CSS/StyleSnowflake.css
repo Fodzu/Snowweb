@@ -303,7 +303,7 @@ p {
 }
 
 .box {
-    font-size: 0.5vw;
+    font-size: 0.8vw;
     margin: max(0.1rem, 0.5vw);
     border: 0.35rem solid;
     padding: 0.5vw;
