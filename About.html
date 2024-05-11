@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnowFlake Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preload" href="CSS/StyleAbout.css" as="style">
+    <link rel="stylesheet" href="CSS/StyleAbout.css">
+    <link rel="icon" href="Pictures/Snowflake%20logo.png" type="image/png">
+    <script src="JS/script.js"></script>
+    <style>
+        /* Add styles for the video background */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        /* Adjust content position and color */
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block; /* Center the image */
+            margin: 0 auto; /* Center the image */
+        }
+
+        .profile p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #b4b4b4;
+        }
+
+        /* Adjust card layout */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .card {
+            margin: 20px; /* Adjust spacing between cards */
+            text-align: center; /* Center the content horizontally */
+        }
+    </style>
+</head>
+<body class="transition-fade">
+
+<video id="bg-video" autoplay muted loop>
+    <source src="Video/Snowfall.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="Pictures/Snowflake%20logoV3.png" alt="Logo Image">
+        SnowFlake Studio
+    </a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="About.html">About Us</a>
+
+        <!-- Dropdown Structure -->
+        <div class="dropdown">
+            <button class="dropbtn">Projects</button>
+            <div class="dropdown-content">
+                <a href="ProjectSnowflake.html">Project Snowflake</a>
+                <!-- Add more languages as needed -->
+            </div>
+        </div>
+
+        <a href="Account.html">Sign in</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="card">
+        <div class="content">
+            <div class="img"><img src="Pictures/Fodzu%20Pfp.jpg"></div>
+            <div class="cardContent">
+                <h3>Fodzu<br><span>Owner</span></h3>
+            </div>
+        </div>
+        <ul class="sci">
+            <li style="--i:1">
+                <a href="https://twitter.com/FodzuXD"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li style="--i:2">
+                <a href="https://www.reddit.com/user/DiscoloredXD/"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+            </li>
+            <li style="--i:3">
+                <a href="https://github.com/Fodzu"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </div>
+    <div class="card">
+        <div class="content">
+            <div class="img"><img src="Pictures/Omegapfp.jpeg"></div>
+            <div class="cardContent">
+                <h3>Omega<br><span>Co Owner</span></h3>
+            </div>
+        </div>
+        <ul class="sci">
+            <li style="--i:1">
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li style="--i:2">
+                <a href="#"><i class="fa fa-twitch" aria-hidden="true"></i></a>
+            </li>
+            <li style="--i:3">
+                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
