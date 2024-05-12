@@ -7,9 +7,11 @@
     <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
     <link rel="preload" href="CSS/StyleSnowflake.css" as="style">
     <link rel="stylesheet" href="CSS/StyleSnowflake.css">
+    <link rel="stylesheet" href="CSS/StyleOverVideo.css">
     <link rel="icon" href="Pictures/Snowflake logo.png" type="image/png">
-    <script src="JS/script.js"></script>
+    <script src="JS/scriptsnowflake.js"></script>
     <style>
+        /* Styles for video and container */
         #bg-video {
             position: fixed;
             right: 0;
@@ -18,6 +20,38 @@
             min-height: 100%;
             z-index: -1;
             object-fit: cover;
+        }
+        /* Styles for container and video */
+        .container {
+            position: relative;
+            width: 640px;
+            height: 360px;
+            margin: 0 auto;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Hide the overlay initially */
+        .overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Optional transition effect */
+        .overlay.show {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
         }
     </style>
 </head>
@@ -29,6 +63,15 @@
     Your browser does not support the video tag.
 </video>
 
+
+<div id="video-overlay">
+    <video id="background-video" autoplay loop muted>
+        <source src="Video/Loadingv2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+
 <header class="header">
     <a href="index.html" class="logo">
         <img src="Pictures/Snowflake logo.png" alt="Logo Image">
@@ -39,13 +82,10 @@
         <a href="index.html">Home</a>
         <a href="About.html">About Us</a>
 
-        <!-- Dropdown Structure -->
         <div class="dropdown">
             <button class="dropbtn">Projects</button>
             <div class="dropdown-content">
                 <a href="ProjectSnowflake.html">Project Snowflake</a>
-                <!-- Add more languages as needed -->
-
             </div>
         </div>
         <a href="Account.html">Sign In</a>
@@ -62,7 +102,5 @@
         <a href="index.html" class="btn"><span>Home</span></a>
     </div>
 </div>
-
-
 </body>
 </html>

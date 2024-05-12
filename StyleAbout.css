@@ -1,0 +1,246 @@
+/* Main Body */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Nav bar code */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgb(3, 3, 3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 60px;
+    margin-right: 10px;
+    height: auto;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/*Content code */
+
+.content {
+    /* Update to ensure content is visible against video */
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+
+
+/* buttons Code */
+.btn,
+.btn*,
+.btn:after,
+.btn:before,
+.btn:after,
+.btn:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+.btn {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    font-weight: 900;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+    text-transform: uppercase;
+}
+.btn:disabled {
+    cursor: default;
+}
+.btn:-moz-focusring {
+    outline: auto;
+}
+.btn svg {
+    display: block;
+    vertical-align: middle;
+}
+.btn[hidden] {
+    display: none;
+}
+.btn {
+    border-radius: 99rem;
+    border-width: 2px;
+    overflow: hidden;
+    padding: 0.8rem 3rem;
+    position: relative;
+    z-index: 0;
+}
+.btn span {
+    mix-blend-mode: difference;
+}
+.btn:after,
+.btn:before {
+    --skew: 0.2;
+    background: #fff;
+    content: "";
+    display: block;
+    height: 102%;
+    left: calc(-50% - 50% * var(--skew));
+    pointer-events: none;
+    position: absolute;
+    top: -104%;
+    transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+    transition: transform 0.2s ease;
+    width: 100%;
+}
+.btn:after {
+    --progress: 0%;
+    left: calc(50% + 50% * var(--skew));
+    top: 102%;
+    z-index: -1;
+}
+.btn:hover:before {
+    --progress: 100%;
+}
+.btn:hover:after {
+    --progress: -102%;
+}
+
+/* Drop Down Code */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.dropbtn {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+    right: -35%;
+    text-align: center;
+    width: auto;
+}
+
+.dropdown-content a {
+    color: rgb(255, 249, 249);
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #434242;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Transition code */
+
+body {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+body.transition-fade .content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fade-in {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+
+
