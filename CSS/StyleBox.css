@@ -45,7 +45,17 @@ p {
     border-radius: 10px; /
     backdrop-filter: blur(10px);
     border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
-    animation: borderRotate var(--d) linear infinite forwards;
+    animation: borderRotate var(--d) linear infinite;
+}
+
+@keyframes borderRotate {
+    from { --angle: 0deg; } /* Stays at 0deg for a bit longer */
+    20% { --angle: 0deg; }  /* Holds at 0deg for a short duration */
+    to { --angle: 360deg; }  /* Rotates to 360deg quickly */
+
+    /* Intermediate keyframes can stay the same */
+    50% { --angle: 180deg; }
+    75% { --angle: 270deg; }
 }
 
   /* for Ultra wides (like me) */
@@ -61,11 +71,5 @@ p {
     h1, p {
         margin: 10px; /* Add some spacing between elements */
         text-align: center; /* Center align text */
-    }
-}
-
-@keyframes borderRotate {
-    100% {
-        --angle: 420deg;
     }
 }
