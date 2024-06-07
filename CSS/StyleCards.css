@@ -17,11 +17,12 @@
 
 body .container {
     position: absolute;
-    z-index: 1;
+    top: 50%; /* Place the container 50% from the top of the viewport */
+    left: 50%; /* Place the container 50% from the left of the viewport */
+    transform: translate(-50%, -50%); /* Move the container back by half of its own width and height */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
     flex-wrap: wrap;
     padding: 5em;
 }
@@ -30,8 +31,8 @@ body .container .card {
     width: 300px;
     height: 400px;
     margin: 1em;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    background: rgba(49, 48, 48, 0.21);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.68);
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -40,7 +41,7 @@ body .container .card {
     backdrop-filter: blur(40px);
     border: solid 2px transparent;
     background-clip: padding-box;
-    box-shadow: 0px 10px 10px rgba(46, 54, 68, 0.03);
+    box-shadow: 0px 10px 10px rgba(65, 79, 105, 0.1);
     border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
     animation: borderRotate var(--d) linear infinite forwards;
 }
@@ -54,7 +55,7 @@ body .container .card {
 :root .card {
     --d: 2500ms;
     --angle: 90deg;
-    --c1: rgba(255, 255, 255, 0.63);
+    --c1: rgba(255, 255, 255, 0.76);
     --c2: rgba(0, 197, 246, 0);
 }
 

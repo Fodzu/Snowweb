@@ -14,7 +14,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: black;
 }
+
+ .small-snow {
+     font-size: 15px;
+     font-family: "Poppins", sans-serif;
+ }
 
 /* Nav bar code */
 
@@ -77,7 +83,14 @@ body {
     color: #fff;
     padding: 50px;
     text-align: center;
+    z-index: 1;
 }
+
+#content {
+    position: relative;
+    z-index: 1; /* Ensure content is above canvas */
+}
+
 
 /* Profile pictures code */
 .profiles {
@@ -255,6 +268,16 @@ body.transition-fade .content {
     visibility: visible;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+
 
 #bg-video {
     position: fixed;

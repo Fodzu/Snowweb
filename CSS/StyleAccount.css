@@ -14,13 +14,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: black;
 }
+
 
 /* Nav bar code */
 
 .header {
     position: fixed;
-    top: -30px;
+    top: 0;
     left: 0;
     width: 100%;
     padding: 20px 100px;
@@ -28,7 +30,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 200;
+    z-index: 100;
 }
 
 .logo {
@@ -69,7 +71,6 @@ body {
 .navbar a:hover::before {
     width: 100%;
 }
-
 /*Content code */
 
 .content {
@@ -265,6 +266,17 @@ body.transition-fade .content {
     z-index: -1;
     object-fit: cover;
 }
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+
 .form-container {
     position: fixed;
     top: 50%;
@@ -275,7 +287,7 @@ body.transition-fade .content {
 form {
     height: 520px;
     width: 400px;
-    background-color: rgba(255, 255, 255, 0.13);
+    background-color: rgba(255, 255, 255, 0.06);
     border-radius: 10px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.1);
@@ -309,7 +321,7 @@ input {
     display: block;
     height: 50px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.07);
+    background-color: rgba(255, 255, 255, 0.06);
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
@@ -321,11 +333,11 @@ input {
     color: #e5e5e5;
 }
 
-button {
+.buttonlogin {
     margin-top: 50px;
     width: 100%;
     background-color: #ffffff;
-    color: #080710;
+    color: #1f1c33;
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;
@@ -343,14 +355,15 @@ button {
     width: 150px;
     border-radius: 3px;
     padding: 5px 10px 10px 5px;
-    background-color: rgba(255, 255, 255, 0.27);
-    color: #eaf0fb;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
     text-align: center;
 }
 
 .social div:hover {
-    background-color: rgba(255, 255, 255, 0.47);
+    background-color: rgba(255, 255, 255, 0.12);
 }
+
 
 .social .fb {
     margin-left: 25px;
