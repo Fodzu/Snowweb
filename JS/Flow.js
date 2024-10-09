@@ -4,7 +4,7 @@ const opt = {
     noiseScale: 0.009,
     angle: Math.PI / 180 * -90,
     hue1: 200, // specific hue value for the first color
-    hue2: 340, // specific hue value for the second color
+    hue2: 180, // specific hue value for the second color
     sat1: 100, // specific saturation value for the first color
     sat2: 80, // specific saturation value for the second color
     light1: 100, // specific lightness value for the first color
